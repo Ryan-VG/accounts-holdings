@@ -1,6 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var Ticker = require('../public/javascripts/tickerModel');
+var User = require('../public/javascripts/userModel');
 
 var mongoose = require('mongoose'),
     ipAddress = "13.58.5.138",
@@ -12,6 +13,22 @@ mongoose.connect(connStr, { useMongoClient: true })
 
 router.get('/rando', function(req, res, next) {
     res.json(process.env.rando);
+});
+
+router.get('/users', function(req, res, next) {
+    var exists = User.find({});
+
+	exists.exec(function(err, users) {
+        if (err) {
+            throw err;
+		} else if (users) {
+			res.json(users);
+		} else {
+			res.json({
+				"error": "no users found"
+			});
+		}
+    });
 });
 
 router.get('/ticker', function(req, res, next) {

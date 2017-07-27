@@ -39,6 +39,16 @@
         }, function errorCallback(response) {
 
         });
+
+        $http({
+            method: 'GET',
+            url: '/api/users'
+        }).then(function successCallback(response) {
+            var randomUser = Math.random() * response.data.length
+            $scope.currentUser = response.data[Math.floor(randomUser)].userName;
+        }, function errorCallback(response) {
+
+        });
 	}])
 	;
 })(angular);
