@@ -14,8 +14,6 @@ block content
                 ul.nav.navbar-nav
                     li.active
                         a(href='#') Home
-                    li.pull-right
-                        a Rando Process : {{procRando}}
     div.col-sm-12
         h1.align Welcome {{currentUser}}!
         h2.align Portfolio Total : ${{portfolioTotal}}
@@ -42,3 +40,6 @@ block content
                             p Price: ${{fund.tickerPrice}}
                             p Shares: 5
                             p Total Amount: ${{fund.tickerTotal}}
+    footer.footer
+      .container
+          p Rando Process : {{procRando}}

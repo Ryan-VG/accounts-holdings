@@ -45,3 +45,18 @@ nav {
     display: flex;
     justify-content: center;
 }
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 2em;
+    text-align: center;
+    background-color: #902222;
+}
+
+.footer .container p {
+    margin: 4px;
+    color: white;
+}
