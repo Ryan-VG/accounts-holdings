@@ -16,13 +16,13 @@
                 if (response.data[i].tickerCompany === "Vanguard") {
                     var newData = response.data[i];
 
-                    newData.tickerTotal = (newData.tickerPrice * 5).toFixed(2);
+                    newData.tickerTotal = (newData.tickerPrice * 1000).toFixed(2);
                     $scope.portfolioTotal += parseFloat(newData.tickerTotal);
                     $scope.vanguardTickerData.push(newData);
                 } else {
                     var newData = response.data[i];
 
-                    newData.tickerTotal = (newData.tickerPrice * 5).toFixed(2);
+                    newData.tickerTotal = (newData.tickerPrice * 1000).toFixed(2);
                     $scope.portfolioTotal += parseFloat(newData.tickerTotal);
                     $scope.nonVanguardTickerData.push(newData);
                 }
