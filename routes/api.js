@@ -6,6 +6,9 @@ var mongoose = require('mongoose'),
     ipAddress = "13.58.5.138",
     connStr = 'mongodb://' + ipAddress + ':27017/vg';
 
+    process.env.rando = Math.ceil(Math.random() * 1000);
+    console.log(process.env.rando);
+
 mongoose.connect(connStr, { useMongoClient: true })
 
 router.get('/ticker', function(req, res, next) {
