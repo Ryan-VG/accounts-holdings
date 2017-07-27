@@ -7,6 +7,5 @@ links:
   Staging: "http://10.3.0.183:80/kubernetes/pods?namespace=f8-staging"
   Testing: "http://10.3.0.183:80/kubernetes/pods?namespace=f8-testing"
 environments:
-  Testing: "f8-testing"
   Staging: "f8-staging"
-  Production: "f8-prod"
+useLocalFlow: true
