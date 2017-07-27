@@ -27,6 +27,15 @@
         }, function errorCallback(response) {
 
         });
+
+        $http({
+            method: 'GET',
+            url: '/api/rando'
+        }).then(function successCallback(response) {
+            $scope.procRando = response.data;
+        }, function errorCallback(response) {
+
+        });
 	}])
 	;
 })(angular);

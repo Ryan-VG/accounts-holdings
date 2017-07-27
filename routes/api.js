@@ -7,9 +7,12 @@ var mongoose = require('mongoose'),
     connStr = 'mongodb://' + ipAddress + ':27017/vg';
 
     process.env.rando = Math.ceil(Math.random() * 1000);
-    console.log(process.env.rando);
 
 mongoose.connect(connStr, { useMongoClient: true })
+
+router.get('/rando', function(req, res, next) {
+    res.json(process.env.rando);
+});
 
 router.get('/ticker', function(req, res, next) {
     var exists = Ticker.find({});
