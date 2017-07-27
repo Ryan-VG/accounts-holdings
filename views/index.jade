@@ -25,9 +25,9 @@ block content
                         .caption
                             h3 {{fund.tickerCompany}}
                             p Ticker: {{fund.tickerName}}
-                            p Price: {{fund.tickerPrice}}
-                            p Amount holding:
-                            p Total Amount:
+                            p Price: ${{fund.tickerPrice}}
+                            p Amount holding: 5
+                            p Total Amount: {{fund.tickerTotal}}
             h1.align Other Stocks/ETFS
             .row
                 .col-sm-2(ng-repeat="fund in nonVanguardTickerData")
@@ -36,6 +36,6 @@ block content
                         .caption
                             h3 {{fund.tickerCompany}}
                             p Ticker: {{fund.tickerName}}
-                            p Price: {{fund.tickerPrice}}
-                            p Amount holding:
-                            p Total Amount:
+                            p Price: ${{fund.tickerPrice}}
+                            p Amount holding: 5
+                            p Total Amount: {{fund.tickerTotal}}
