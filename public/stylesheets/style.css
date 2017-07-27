@@ -36,3 +36,12 @@ nav {
 .align {
     text-align: center;
 }
+
+.marginme{
+    margin: 1em;
+}
+
+.flexcenter {
+    display: flex;
+    justify-content: center;
+}

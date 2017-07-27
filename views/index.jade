@@ -18,8 +18,8 @@ block content
         h1.align Welcome Ryan!
         div.col-sm-12
             h1.align Vanguard Stocks/ETFs
-            .row
-                .col-sm-2(ng-repeat="fund in vanguardTickerData")
+            .row.flexcenter
+                .col-sm-2.marginme(ng-repeat="fund in vanguardTickerData")
                     .thumbnail
                         img(src='images/vanguard.jpg', alt='{{fund.tickerCompany}}')
                         .caption
@@ -29,8 +29,8 @@ block content
                             p Amount holding: 5
                             p Total Amount: {{fund.tickerTotal}}
             h1.align Other Stocks/ETFS
-            .row
-                .col-sm-2(ng-repeat="fund in nonVanguardTickerData")
+            .row.flexcenter
+                .col-sm-2.marginme(ng-repeat="fund in nonVanguardTickerData")
                     .thumbnail
                         img(src='images/{{fund.tickerCompany}}.png', alt='{{fund.tickerCompany}}')
                         .caption
