@@ -1,8 +1,37 @@
 body {
-  padding: 50px;
+  background-color: #eae8e4 !important;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
 a {
   color: #00B7FF;
+}
+
+nav {
+    background-color: #902222 !important
+}
+
+.navbar-default .navbar-brand {
+    color: white !important;
+}
+
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover {
+    color: white !important;
+    background-color: #736565 !important;
+}
+
+.navbar-default .navbar-nav>li>a {
+    color: white !important;
+}
+
+.thumbnail {
+    height: 26em !important;
+}
+
+.thumbnail > img {
+    height: 50% !important;
+}
+
+.align {
+    text-align: center;
 }

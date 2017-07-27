@@ -3,7 +3,7 @@ var router = express.Router();
 var Ticker = require('../public/javascripts/tickerModel');
 
 var mongoose = require('mongoose'),
-    ipAddress = "ASK ME",
+    ipAddress = "13.58.5.138",
     connStr = 'mongodb://' + ipAddress + ':27017/vg';
 
 mongoose.connect(connStr, { useMongoClient: true })

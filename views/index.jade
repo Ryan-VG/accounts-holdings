@@ -1,5 +1,40 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+    nav.navbar.navbar-default.navbar-static-top
+        .container-fluid
+            .navbar-header
+                button.collapsed.navbar-toggle(type='button', data-toggle='collapse', data-target='#bs-example-navbar-collapse-8', aria-expanded='false')
+                    span.sr-only Toggle navigation
+                    span.icon-bar
+                    span.icon-bar
+                    span.icon-bar
+                a.navbar-brand(href='#') Vanguard
+            #bs-example-navbar-collapse-8.collapse.navbar-collapse
+                ul.nav.navbar-nav
+                    li.active
+                        a(href='#') Home
+                    li
+                        a(href='#') Link
+                    li
+                        a(href='#') Link
+    div.col-sm-12
+        h1.align Welcome Ryan!
+        div.col-sm-6
+            .row
+                .col-sm-6.col-md-4
+                    .thumbnail
+                        img(src='images/google.png', alt='...')
+                        .caption
+                            h3 Google
+                            p Price:
+                            p Amount holding:
+                            p Total Amount:
+                .col-sm-6.col-md-4
+                    .thumbnail
+                        img(src='images/vanguard.jpg', alt='...')
+                        .caption
+                            h3 Vanguard
+                            p Price:
+                            p Amount holding:
+                            p Total Amount:
