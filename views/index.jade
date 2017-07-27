@@ -16,7 +16,7 @@ block content
                         a(href='#') Home
     div.col-sm-12
         h1.align Welcome {{currentUser}}!
-        h2.align Portfolio Total : ${{portfolioTotal}}
+        h2.align Portfolio Total : {{portfolioTotal | currency:"$"}}
         div.col-sm-12
             h1.align Vanguard Stocks/ETFs
             .row.flexcenter
@@ -26,9 +26,9 @@ block content
                         .caption
                             h3 {{fund.tickerCompany}}
                             p Ticker: {{fund.tickerName}}
-                            p Price: ${{fund.tickerPrice}}
+                            p Price: {{fund.tickerPrice | currency:"$"}}
                             p Shares: 1000
-                            p Total Amount: ${{fund.tickerTotal}}
+                            p Total Amount: {{fund.tickerTotal | currency:"$"}}
             h1.align Other Stocks/ETFS
             .row.flexcenter
                 .marginme(ng-repeat="fund in nonVanguardTickerData")
@@ -37,9 +37,9 @@ block content
                         .caption
                             h3 {{fund.tickerCompany}}
                             p Ticker: {{fund.tickerName}}
-                            p Price: ${{fund.tickerPrice}}
+                            p Price: {{fund.tickerPrice | currency:"$"}}
                             p Shares: 1000
-                            p Total Amount: ${{fund.tickerTotal}}
+                            p Total Amount: {{fund.tickerTotal | currency:"$"}}
     footer.footer
       .container
           p Rando Process : {{procRando}}
