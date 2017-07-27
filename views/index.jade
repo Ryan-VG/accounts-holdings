@@ -14,27 +14,28 @@ block content
                 ul.nav.navbar-nav
                     li.active
                         a(href='#') Home
-                    li
-                        a(href='#') Link
-                    li
-                        a(href='#') Link
     div.col-sm-12
         h1.align Welcome Ryan!
-        div.col-sm-6
+        div.col-sm-12
+            h1.align Vanguard Stocks/ETFs
             .row
-                .col-sm-6.col-md-4
-                    .thumbnail
-                        img(src='images/google.png', alt='...')
-                        .caption
-                            h3 Google
-                            p Price:
-                            p Amount holding:
-                            p Total Amount:
-                .col-sm-6.col-md-4
+                .col-sm-3(ng-repeat="fund in vanguardTickerData")
                     .thumbnail
                         img(src='images/vanguard.jpg', alt='...')
                         .caption
                             h3 Vanguard
-                            p Price:
+                            p Ticker: {{fund.tickerName}}
+                            p Price: {{fund.tickerPrice}}
+                            p Amount holding:
+                            p Total Amount:
+            h1.align Other Stocks/ETFS
+            .row
+                .col-sm-3(ng-repeat="fund in nonVanguardTickerData")
+                    .thumbnail
+                        img(src='images/amazon.jpg', alt='...')
+                        .caption
+                            h3 Google
+                            p Ticker: {{fund.tickerName}}
+                            p Price: {{fund.tickerPrice}}
                             p Amount holding:
                             p Total Amount:
