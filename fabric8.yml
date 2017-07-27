@@ -2,9 +2,9 @@
 buildName: "accounts-holdings"
 links:
   Git: "https://github.com/Ryan-VG/accounts-holdings.git"
-  Job: "http://jenkins.f8.52.24.88.159.xip.io/job/accounts-holdings"
+  Job: "http://jenkins.f8.35.163.57.132.xip.io/job/accounts-holdings"
   Production: "http://10.3.0.183:80/kubernetes/pods?namespace=f8-prod"
-  Staging: "http://10.3.0.183:80/kubernetes/pods?namespace=f8-staging"
+  Staging: "http://10.3.0.246:80/kubernetes/pods?namespace=f8-staging"
   Testing: "http://10.3.0.183:80/kubernetes/pods?namespace=f8-testing"
 environments:
   Staging: "f8-staging"
