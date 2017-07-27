@@ -26,6 +26,7 @@ nav {
 
 .thumbnail {
     height: 26em !important;
+    width: 16em !important;
 }
 
 .thumbnail > img {

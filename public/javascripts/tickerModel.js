@@ -9,6 +9,10 @@ var TickerSchema = new Schema({
 			unique: true
 		}
 	},
+	tickerCompany: {
+		type: String,
+		required: true
+	},
 	tickerPrice: {
 		type: String,
 		required: true

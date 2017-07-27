@@ -11,7 +11,7 @@
             $scope.vanguardTickerData = [];
             $scope.nonVanguardTickerData = [];
             for (var i in response.data) {
-                if (response.data[i].tickerName.indexOf("Vanguard") != -1) {
+                if (response.data[i].tickerCompany === "Vanguard") {
                     $scope.vanguardTickerData.push(response.data[i]);
                 } else {
                     $scope.nonVanguardTickerData.push(response.data[i]);

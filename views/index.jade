@@ -19,22 +19,22 @@ block content
         div.col-sm-12
             h1.align Vanguard Stocks/ETFs
             .row
-                .col-sm-3(ng-repeat="fund in vanguardTickerData")
+                .col-sm-2(ng-repeat="fund in vanguardTickerData")
                     .thumbnail
-                        img(src='images/vanguard.jpg', alt='...')
+                        img(src='images/vanguard.jpg', alt='{{fund.tickerCompany}}')
                         .caption
-                            h3 Vanguard
+                            h3 {{fund.tickerCompany}}
                             p Ticker: {{fund.tickerName}}
                             p Price: {{fund.tickerPrice}}
                             p Amount holding:
                             p Total Amount:
             h1.align Other Stocks/ETFS
             .row
-                .col-sm-3(ng-repeat="fund in nonVanguardTickerData")
+                .col-sm-2(ng-repeat="fund in nonVanguardTickerData")
                     .thumbnail
-                        img(src='images/amazon.jpg', alt='...')
+                        img(src='images/{{fund.tickerCompany}}.png', alt='{{fund.tickerCompany}}')
                         .caption
-                            h3 Google
+                            h3 {{fund.tickerCompany}}
                             p Ticker: {{fund.tickerName}}
                             p Price: {{fund.tickerPrice}}
                             p Amount holding:
