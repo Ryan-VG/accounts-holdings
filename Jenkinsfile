@@ -21,7 +21,6 @@ clientsNode{
     icon = 'https://cdn.rawgit.com/fabric8io/fabric8/dc05040/website/src/images/logos/nodejs.svg'
     version = newVersion
     imageName = clusterImageName
-    replicas = 40
   }
 
   stage 'Rollout Staging'
