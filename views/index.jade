@@ -9,37 +9,36 @@ block content
                     span.icon-bar
                     span.icon-bar
                     span.icon-bar
-                a.navbar-brand(href='#') Vanguard
+                a.navbar-brand Vanguard - Portfolio Total : {{portfolioTotal | currency:"$"}}
             #bs-example-navbar-collapse-8.collapse.navbar-collapse
                 ul.nav.navbar-nav
                     li.active
-                        a(href='#') Home
+                        a Home
+                    li.right
+                        a Welcome {{currentUser}}!
     div.col-sm-12
-        h1.align Welcome {{currentUser}}!
-        h2.align Portfolio Total : {{portfolioTotal | currency:"$"}}
-        div.col-sm-12
-            h1.align Vanguard Stocks/ETFs
-            .row.flexcenter
-                .marginme(ng-repeat="fund in vanguardTickerData")
-                    .thumbnail
-                        img(src='images/{{fund.tickerCompany}}.jpg', alt='{{fund.tickerCompany}}')
-                        .caption
-                            h3 {{fund.tickerCompany}}
-                            p Ticker: {{fund.tickerName}}
-                            p Price: {{fund.tickerPrice | currency:"$"}}
-                            p Shares: 1,000
-                            p Total Amount: {{fund.tickerTotal | currency:"$"}}
-            h1.align Other Stocks/ETFS
-            .row.flexcenter
-                .marginme(ng-repeat="fund in nonVanguardTickerData")
-                    .thumbnail
-                        img(src='images/{{fund.tickerCompany}}.png', alt='{{fund.tickerCompany}}')
-                        .caption
-                            h3 {{fund.tickerCompany}}
-                            p Ticker: {{fund.tickerName}}
-                            p Price: {{fund.tickerPrice | currency:"$"}}
-                            p Shares: 1,000
-                            p Total Amount: {{fund.tickerTotal | currency:"$"}}
+        h1.align Vanguard Stocks/ETFs
+        .row.flexcenter
+            .marginme(ng-repeat="fund in vanguardTickerData")
+                .thumbnail
+                    img(src='images/{{fund.tickerCompany}}.jpg', alt='{{fund.tickerCompany}}')
+                    .caption
+                        h3 {{fund.tickerCompany}}
+                        p Ticker: {{fund.tickerName}}
+                        p Price: {{fund.tickerPrice | currency:"$"}}
+                        p Shares: 1,000
+                        p Total Amount: {{fund.tickerTotal | currency:"$"}}
+        h1.align Other Stocks/ETFS
+        .row.flexcenter
+            .marginme(ng-repeat="fund in nonVanguardTickerData")
+                .thumbnail
+                    img(src='images/{{fund.tickerCompany}}.png', alt='{{fund.tickerCompany}}')
+                    .caption
+                        h3 {{fund.tickerCompany}}
+                        p Ticker: {{fund.tickerName}}
+                        p Price: {{fund.tickerPrice | currency:"$"}}
+                        p Shares: 1,000
+                        p Total Amount: {{fund.tickerTotal | currency:"$"}}
     footer.footer
       .container
           p Random Process : {{procRando}}

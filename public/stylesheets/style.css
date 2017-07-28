@@ -61,3 +61,8 @@ nav {
     margin: 4px;
     color: white;
 }
+
+.right {
+    position: fixed !important;
+    right: 0;
+}
