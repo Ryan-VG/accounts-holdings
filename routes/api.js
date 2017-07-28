@@ -25,6 +25,7 @@ router.get('/users', function(req, res, next) {
 		} else if (users) {
             console.log("\"current_date\":\"" + Date.now() + "\"|" + "\"all_users\":\"" + users + "\"");
 			res.json(users);
+            
 		} else {
             console.log("\"current_date\":\"" + Date.now() + "\"|" + "\"all_users\":\"ERROR::Couldn't retrieve users\"");
 			res.json({
