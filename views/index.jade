@@ -22,7 +22,7 @@ block content
             .row.flexcenter
                 .marginme(ng-repeat="fund in vanguardTickerData")
                     .thumbnail
-                        img(src='images/vanguard.jpg', alt='{{fund.tickerCompany}}')
+                        img(src='images/{{fund.tickerCompany}}.jpg', alt='{{fund.tickerCompany}}')
                         .caption
                             h3 {{fund.tickerCompany}}
                             p Ticker: {{fund.tickerName}}
