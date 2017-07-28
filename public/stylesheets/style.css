@@ -38,12 +38,13 @@ nav {
 }
 
 .marginme{
-    margin: 1em;
+    margin: 0.5em;
 }
 
 .flexcenter {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 .footer {
