@@ -21,54 +21,7 @@ clientsNode{
     icon = 'https://cdn.rawgit.com/fabric8io/fabric8/dc05040/website/src/images/logos/nodejs.svg'
     version = newVersion
     imageName = clusterImageName
-    deployment = """
-  - apiVersion: extensions/v1beta1
-  kind: Deployment
-  metadata:
-    annotations:
-      fabric8.io/iconUrl: ${config.icon}
-    labels:
-      provider: fabric8
-      project: ${env.JOB_NAME}
-      version: ${config.version}
-      group: quickstart
-    name: ${env.JOB_NAME}
-  spec:
-    replicas: 40
-    selector:
-      matchLabels:
-        provider: fabric8
-        project: ${env.JOB_NAME}
-        group: quickstart
-    template:
-      metadata:
-        labels:
-          provider: fabric8
-          project: ${env.JOB_NAME}
-          version: ${config.version}
-          group: quickstart
-      spec:
-        containers:
-        - env:
-          - name: KUBERNETES_NAMESPACE
-            valueFrom:
-              fieldRef:
-                fieldPath: metadata.namespace
-          image: ${fabric8Registry}${env.KUBERNETES_NAMESPACE}/${env.JOB_NAME}:${config.version}
-          imagePullPolicy: IfNotPresent
-          name: ${env.JOB_NAME}
-          ports:
-          - containerPort: ${config.port}
-            name: http
-          resources:
-            limits:
-              cpu: ${requestCPU}
-              memory: ${requestMemory}
-            requests:
-              cpu: ${limitCPU}
-              memory: ${limitMemory}
-        terminationGracePeriodSeconds: 2
-"""  
+    replicas = 40
   }
 
   stage 'Rollout Staging'
